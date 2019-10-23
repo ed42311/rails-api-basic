@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2019_10_22_211523) do
 
   create_table "oauth_access_tokens", force: :cascade do |t|
     t.integer "resource_owner_id"
-    t.integer "application_id", null: false
+    t.integer "application_id"
     t.string "token", null: false
     t.string "refresh_token"
     t.integer "expires_in"
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 2019_10_22_211523) do
     t.string "name", null: false
     t.string "uid", null: false
     t.string "secret", null: false
-    t.text "redirect_uri", null: false
+    t.text "redirect_uri"
     t.string "scopes", default: "", null: false
     t.boolean "confidential", default: true, null: false
     t.datetime "created_at", precision: 6, null: false
